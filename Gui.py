@@ -122,6 +122,7 @@ def guiMain(settings=None):
     frames['rules_tab'] = ttk.Frame(notebook)
     frames['logic_tab'] = ttk.Frame(notebook)
     frames['other_tab'] = ttk.Frame(notebook)
+    frames['quality_of_life'] = ttk.Frame(notebook)
     frames['cosmetic_tab'] = ttk.Frame(notebook)
     frames['cosmetic_tab_left'] = Frame(frames['cosmetic_tab'])
     frames['cosmetic_tab_right'] = Frame(frames['cosmetic_tab'])
@@ -129,6 +130,7 @@ def guiMain(settings=None):
     notebook.add(frames['rules_tab'], text='Main Rules')
     notebook.add(frames['logic_tab'], text='Detailed Logic')
     notebook.add(frames['other_tab'], text='Other')
+    notebook.add(frames['quality_of_life'], text='QoL improvement')
     notebook.add(frames['cosmetic_tab'], text='Cosmetic')
 
     #######################
@@ -155,6 +157,10 @@ def guiMain(settings=None):
     #Other Tab
     frames['convenience'] = LabelFrame(frames['other_tab'],          text='Timesavers',        labelanchor=NW)
     frames['other']       = LabelFrame(frames['other_tab'],          text='Misc',              labelanchor=NW)
+
+    #QOL tab
+    frames['mechanics']   = LabelFrame(frames['quality_of_life'],    text='Mechanics',         labelanchor=NW)
+    frames['cutscenes']    = LabelFrame(frames['quality_of_life'],    text='Cutscenes',          labelanchor=NW)
 
     #Cosmetic tab
     frames['cosmetic']    = LabelFrame(frames['cosmetic_tab'],       text='General',           labelanchor=NW)
@@ -419,6 +425,10 @@ def guiMain(settings=None):
     # Other Tab
     frames['convenience'].pack(fill=BOTH, expand=True, anchor=N, side=LEFT, pady=(5,1))
     frames['other'].pack(      fill=BOTH, expand=True, anchor=N, side=LEFT, pady=(5,1))
+
+    #QOL Tab
+    frames['mechanics'].pack(fill=BOTH, expand=True, anchor=N, side=LEFT, pady=(5,1))
+    frames['cutscenes'].pack(      fill=BOTH, expand=True, anchor=N, side=LEFT, pady=(5,1))
 
     # Cosmetics tab
     frames['cosmetic'].pack(          fill=BOTH, expand=True, anchor=W, side=TOP)
