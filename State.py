@@ -238,14 +238,14 @@ class State(object):
             return True
         elif ((self.world.open_forest == 'vanilla') or (self.world.open_forest == 'deku')):
             return self.can_reach(self.world.get_location('Queen Gohma'))
-        else:
+        else: #Forest escape and Deku escape
             can_teleport = self.can_play('Prelude of Light') or self.can_play('Serenade of Water') or self.can_play('Nocturne of Shadow')
-            lost_wood_exit = self.has_explosives() or self.can_use('Dins Fire') or self.can_dive()
+            lost_wood_exit = (self.has_explosives() or self.can_use('Dins Fire')) or self.can_dive()
             return self.can_reach(self.world.get_location('Queen Gohma')) or lost_wood_exit or can_teleport
 
 
     def open_deku(self):
-        return (self.has('Kokiri Sword') and self.has('Buy Deku Shield')) or (self.world.open_forest == 'open') or (self.world.open_forest == 'deku') or (self.world.open_forest == 'dekuLogic') or (self.has('Zeldas Letter'))
+        return (self.has('Kokiri Sword') and self.has('Buy Deku Shield')) or (self.world.open_forest == 'open') or (self.world.open_forest == 'deku') or (self.world.open_forest == 'deku_escape') or (self.has('Zeldas Letter'))
 
 
     def can_finish_adult_trades(self):

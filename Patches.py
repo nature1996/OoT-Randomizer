@@ -798,7 +798,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:LocalRom):
         rom.write_int32(symbol, 5)
 
     # "open Deku Tree"
-    if ((world.open_forest == 'open') or (world.open_forest == 'deku') or (world.open_forest == 'dekuLogic')):
+    if ((world.open_forest == 'open') or (world.open_forest == 'deku') or (world.open_forest == 'deku_escape')):
         write_bits_to_save(0xED5, 0x10) # "Showed Mido Sword & Shield"
 
     if world.open_door_of_time:
