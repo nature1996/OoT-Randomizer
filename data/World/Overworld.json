@@ -165,7 +165,7 @@
     {
         "region_name": "Lost Woods Bridge",
         "locations": {
-            "Gift from Saria": "True"
+            "Gift from Saria": "(open_forest == 'open') or can_reach(Queen_Gohma, Location)"
         },
         "exits": {
             "Kokiri Forest": "True",

@@ -245,7 +245,7 @@ class State(object):
 
 
     def open_deku(self):
-        return (self.has('Kokiri Sword') and self.has('Buy Deku Shield')) or self.world.open_forest == 'open' or self.world.open_forest == 'deku' or self.world.open_forest == 'dekuLogic'
+        return (self.has('Kokiri Sword') and self.has('Buy Deku Shield')) or (self.world.open_forest == 'open') or (self.world.open_forest == 'deku') or (self.world.open_forest == 'dekuLogic') or (self.has('Zeldas Letter'))
 
 
     def can_finish_adult_trades(self):
