@@ -13,14 +13,9 @@
             "GS Kokiri House of Twins": "
                 (can_use(Hookshot) or 
                     (logic_adult_kokiri_gs and can_use(Hover_Boots))) and nighttime",
-            "Deku Baba Sticks": "
-                (Kokiri_Sword and Buy_Deku_Shield) or 
-                (open_forest and (is_adult or Kokiri_Sword or Boomerang))",
-            "Deku Baba Nuts": "
-                (Kokiri_Sword and Buy_Deku_Shield) or 
-                (open_forest and 
-                    (is_adult or has_slingshot or has_sticks or 
-                        has_explosives or Kokiri_Sword or can_use(Dins_Fire)))",
+            "Deku Baba Sticks": "open_deku and (is_adult or Kokiri_Sword or Boomerang)",
+            "Deku Baba Nuts": "open_deku and (is_adult or has_slingshot or has_sticks or 
+                        has_explosives or Kokiri_Sword or can_use(Dins_Fire))",
             "Kokiri Forest Gossip Stone": "True"
         },
         "exits": {
@@ -30,9 +25,9 @@
             "House of Twins": "True",
             "Know It All House": "True",
             "Kokiri Shop": "True",
-            "Deku Tree Lobby": "(Kokiri_Sword and Buy_Deku_Shield) or open_forest",
+            "Deku Tree Lobby": "open_deku",
             "Lost Woods": "True",
-            "Lost Woods Bridge": "can_leave_forest",
+            "Lost Woods Bridge": "(open_forest == 'open') or can_reach(Queen_Gohma, Location)",
             "Kokiri Forest Storms Grotto": "can_play(Song_of_Storms)"
         }
     },
@@ -47,11 +42,11 @@
             "Forest Temple Entry Area": "can_play(Minuet_of_Forest) and is_adult",
             "Temple of Time": "can_play(Prelude_of_Light) and can_leave_forest",
             "Death Mountain Crater Central": "
-                can_play(Bolero_of_Fire) and can_leave_forest",
+                can_play(Bolero_of_Fire) and (open_forest != 'vanilla' and open_forest != 'deku')",
             "Lake Hylia": "can_play(Serenade_of_Water) and can_leave_forest",
             "Shadow Temple Warp Region": "
                 can_play(Nocturne_of_Shadow) and can_leave_forest",
-            "Desert Colossus": "can_play(Requiem_of_Spirit) and can_leave_forest"
+            "Desert Colossus": "can_play(Requiem_of_Spirit) and (open_forest != 'vanilla' and open_forest != 'deku')"
         }
     },
     {

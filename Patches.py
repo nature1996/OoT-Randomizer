@@ -588,7 +588,7 @@ def patch_rom(spoiler:Spoiler, world:World, rom:LocalRom):
     # Change Pokey to check DT complete flag
     rom.write_bytes(0xE5400A, [0x8C, 0x4C])
     rom.write_bytes(0xE5400E, [0xB4, 0xA4])
-    if world.open_forest:
+    if (world.open_forest == 'open'):
         rom.write_bytes(0xE5401C, [0x14, 0x0B])
 
     # Fix Shadow Temple to check for different rewards for scene
@@ -797,7 +797,8 @@ def patch_rom(spoiler:Spoiler, world:World, rom:LocalRom):
     elif world.bridge == 'tokens':
         rom.write_int32(symbol, 5)
 
-    if world.open_forest:
+    # "open Deku Tree"
+    if ((world.open_forest == 'open') or (world.open_forest == 'deku') or (world.open_forest == 'dekuLogic')):
         write_bits_to_save(0xED5, 0x10) # "Showed Mido Sword & Shield"
 
     if world.open_door_of_time:
