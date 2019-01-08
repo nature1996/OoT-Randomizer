@@ -484,11 +484,11 @@ setting_infos = [
                 },
             args_help      = '''\
                              Select how to exit Kokiri Forest/access Deku Tree (default: %(default)s)
-                             Open:      Deku Tree and Forest exit are open from the start.
-                             Closed:    Follow the vanilla logic for Kokiri Forest, guaranteed required item in Forest.
-                             Deku:      Same as previous, but with Deku Tree open from the start.
-                             More:      Exit with vanilla requirement, but song and Lost Wood exits included in Logic.
-                             DekuLogic: Same as previous, but Deku Tree is open from the start.
+                             Open:        Deku Tree and Forest exit are open from the start.
+                             Closed:      Follow the vanilla logic for Kokiri Forest, guaranteed required item in Forest.
+                             Deku:        Same as previous, but with Deku Tree open from the start.
+                             Escape:      Exit with vanilla requirement, but song and Lost Wood exits included in Logic.
+                             Deku_escape: Same as previous, but Deku Tree is open from the start.
                              ''',
             gui_text       = 'Kokiri Forest / Deku Tree',
             gui_group      = 'open',
