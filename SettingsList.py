@@ -472,24 +472,47 @@ setting_infos = [
         },
         shared=False,
     ),
-    Checkbutton(
+    Combobox(
             name           = 'open_forest',
+            default        = 'open',
+            choices        = {
+                'open':        'Open Forest',
+                'closed':      'Vanilla closed',
+                'deku':        'Open Deku Tree',
+                'escape':      'Forest escape',
+                'deku_escape': 'Forest escape + Deku Tree open'
+                },
             args_help      = '''\
-                             Mido no longer blocks the path to the Deku Tree, and
-                             the Kokiri boy no longer blocks the path out of the forest.
+                             Select how to exit Kokiri Forest/access Deku Tree (default: %(default)s)
+                             Open:        Deku Tree and Forest exit are open from the start.
+                             Closed:      Follow the vanilla logic for Kokiri Forest, guaranteed required item in Forest.
+                             Deku:        Same as previous, but with Deku Tree open from the start.
+                             Escape:      Exit with vanilla requirement, but song and Lost Wood exits included in Logic.
+                             Deku_escape: Same as previous, but Deku Tree is open from the start.
                              ''',
-            gui_text       = 'Open Forest',
+            gui_text       = 'Kokiri Forest / Deku Tree',
             gui_group      = 'open',
             gui_tooltip    = '''\
-                             Mido no longer blocks the path to the Deku Tree,
-                             and the Kokiri boy no longer blocks the path out
-                             of the forest.
-
-                             When this option is off, the Kokiri Sword and
-                             Slingshot are always available somewhere
+                             'Open Forest': Mido no longer blocks the path to the Deku Tree, and
+                             the Kokiri boy no longer blocks the path out of the forest.
+                             
+                             'Closed': Mido blocks the path to the Deku Tree, and
+                             the Kokiri boy blocks the path out of the forest. The Kokiri Sword,
+                             Kokiri shield and Slingshot are always available somewhere
                              in the forest.
+                             
+                             'Open Deku Tree': Same as previous, but Mido no longer blocks the path
+                             to the Deku Tree.
+                             
+                             'Forest escape': Mido blocks the path to the Deku Tree, and
+                             the Kokiri boy blocks the path out of the forest. You might be expected
+                             to exit using a warp song or one of the Lost Wood exits. Might need to
+                             save-warp back in. (nb: for now, gaining Zelda letter opens remove Mido,
+                             and is considered in logic.)
+                             
+                             'Forest escape + Deku Tree open': Same as previous, but Mido no longer
+                             blocks the path to the Deku Tree.
                              ''',
-            default        = True,
             shared         = True,
             ),
     Checkbutton(
@@ -568,7 +591,7 @@ setting_infos = [
             choices        = {
                 'open':       'Always Open',
                 'vanilla':    'Vanilla Requirements',
-                'stones':	  'All Spiritual Stones',
+                'stones':     'All Spiritual Stones',
                 'medallions': 'All Medallions',
                 'dungeons':   'All Dungeons',
                 'tokens':     '100 Gold Skulltula Tokens'
