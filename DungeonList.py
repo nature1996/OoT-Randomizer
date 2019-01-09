@@ -95,12 +95,16 @@ dungeon_table = [
 
 
 def create_dungeons(world):
+    if world.logic_rules == 'glitched':
+        logic_path = data_path('World/Glitched')
+    else:
+        logic_path = data_path('World/Glitchless')
     for dungeon_info in dungeon_table:
         name = dungeon_info['name']
         if not world.dungeon_mq[name]:
-            dungeon_json = os.path.join(data_path('World'), name + '.json')
+            dungeon_json = os.path.join(logic_path, name + '.json')
         else:
-            dungeon_json = os.path.join(data_path('World'), name + ' MQ.json')
+            dungeon_json = os.path.join(logic_path, name + ' MQ.json')
         world.load_regions_from_json(dungeon_json)
 
         boss_keys = ItemFactory(['Boss Key (%s)' % name] * dungeon_info['boss_key'])

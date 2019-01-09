@@ -599,6 +599,7 @@ setting_infos = [
             default        = 'glitchless',
             choices        = {
                 'glitchless': 'Glitchless',
+                'glitched':   'Glitched',
                 'none':       'No Logic',
                 },
             args_help      = '''\

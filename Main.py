@@ -93,8 +93,10 @@ def main(settings, window=dummy_window()):
         for dung in mqd_picks:
             world.dungeon_mq[dung] = True
 
-
-        overworld_data = os.path.join(data_path('World'), 'Overworld.json')
+        if world.logic_rules == 'glitched':
+            overworld_data = os.path.join(data_path('World/Glitched'), 'Overworld.json')
+        else:
+            overworld_data = os.path.join(data_path('World/Glitchless'), 'Overworld.json')
         world.load_regions_from_json(overworld_data)
 
         create_dungeons(world)
