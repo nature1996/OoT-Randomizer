@@ -13,9 +13,6 @@
             "GS Kokiri House of Twins": "
                 (can_use(Hookshot) or 
                     (logic_adult_kokiri_gs and can_use(Hover_Boots))) and nighttime",
-            "Deku Baba Sticks": "(open_deku and (Kokiri_Sword or Boomerang)) or is_adult",
-            "Deku Baba Nuts": "(open_deku and (has_slingshot or has_sticks or 
-                        has_explosives or Kokiri_Sword or can_use(Dins_Fire))) or is_adult",
             "Kokiri Forest Gossip Stone": "True"
         },
         "exits": {
@@ -25,10 +22,24 @@
             "House of Twins": "True",
             "Know It All House": "True",
             "Kokiri Shop": "True",
-            "Deku Tree Lobby": "open_deku",
+            "Deku Tree Glade": "open_deku or is_adult",
             "Lost Woods": "True",
             "Lost Woods Bridge": "(open_forest == 'open') or can_reach(Queen_Gohma, Location) or is_adult",
             "Kokiri Forest Storms Grotto": "can_play(Song_of_Storms)"
+        }
+    },
+    {
+        "region_name": "Deku Tree Glade",
+        "locations": {
+            "Deku Baba Sticks": "Kokiri_Sword or Boomerang or is_adult",
+            "Deku Baba Nuts": "has_slingshot or has_sticks or has_explosives
+                        or Kokiri_Sword or can_use(Dins_Fire) or is_adult",
+            "Deku Tree Gossip Stone (Left)": "True",
+            "Deku Tree Gossip Stone (Right)": "True"
+        },
+        "exits": {
+            "Kokiri Forest": "True",
+            "Deku Tree Lobby": "open_deku"
         }
     },
     {

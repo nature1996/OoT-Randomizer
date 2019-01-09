@@ -11,12 +11,10 @@
             "GS Deku Tree Basement Vines": "
                 has_slingshot or Boomerang or has_explosives or can_use(Dins_Fire) or 
                 (logic_deku_basement_gs and (has_sticks or Kokiri_Sword))",
-            "GS Deku Tree Basement Gate": "can_child_attack",
-            "Deku Tree Gossip Stone (Left)": "True",
-            "Deku Tree Gossip Stone (Right)": "True"
+            "GS Deku Tree Basement Gate": "can_child_attack"
         },
         "exits": {
-            "Kokiri Forest": "True",
+            "Deku Tree Glade": "True",
             "Deku Tree Slingshot Room": "Buy_Deku_Shield",
             "Deku Tree Boss Room": "has_slingshot and (has_sticks or can_use(Dins_Fire))"
         }
