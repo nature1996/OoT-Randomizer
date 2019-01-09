@@ -1961,57 +1961,21 @@ setting_infos = [
                       '''
         }),
     Combobox(
-            name           = 'sfx_nightfall',
+            name           = 'sfx_navi_overworld',
             default        = 'default',
-            choices        = sfx.get_setting_choices(sfx.SoundHooks.NIGHTFALL),
+            choices        = sfx.get_setting_choices(sfx.SoundHooks.NAVI_OVERWORLD),
             args_help      = '''\
                              ''',
-            gui_text       = 'Nightfall',
+            gui_text       = 'Navi Overworld',
             gui_group      = 'sfx',
             ),
     Combobox(
-            name           = 'sfx_hover_boots',
+            name           = 'sfx_navi_enemy',
             default        = 'default',
-            choices        = sfx.get_setting_choices(sfx.SoundHooks.BOOTS_HOVER),
+            choices        = sfx.get_setting_choices(sfx.SoundHooks.NAVI_ENEMY),
             args_help      = '''\
                              ''',
-            gui_text       = 'Hover Boots',
-            gui_group      = 'sfx',
-            ),
-    Combobox(
-            name           = 'sfx_menu_select',
-            default        = 'default',
-            choices        = sfx.get_setting_choices(sfx.SoundHooks.MENU_SELECT),
-            args_help      = '''\
-                             ''',
-            gui_text       = 'Menu Select',
-            gui_group      = 'sfx',
-            ),
-    Combobox(
-            name           = 'sfx_menu_cursor',
-            default        = 'default',
-            choices        = sfx.get_setting_choices(sfx.SoundHooks.MENU_CURSOR),
-            args_help      = '''\
-                             ''',
-            gui_text       = 'Menu Cursor',
-            gui_group      = 'sfx',
-            ),
-    Combobox(
-            name           = 'sfx_horse_neigh',
-            default        = 'default',
-            choices        = sfx.get_setting_choices(sfx.SoundHooks.HORSE_NEIGH),
-            args_help      = '''\
-                             ''',
-            gui_text       = 'Horse',
-            gui_group      = 'sfx',
-            ),
-    Combobox(
-            name           = 'sfx_navi',
-            default        = 'default',
-            choices        = sfx.get_setting_choices(sfx.SoundHooks.NAVI),
-            args_help      = '''\
-                             ''',
-            gui_text       = 'Navi',
+            gui_text       = 'Navi Enemy',
             gui_group      = 'sfx',
             ),
     Combobox(
@@ -2031,6 +1995,51 @@ setting_infos = [
                              sound from this list.
                              'Default': Beep. Beep. Beep.
                              ''',
+            ),
+    Combobox(
+            name           = 'sfx_menu_cursor',
+            default        = 'default',
+            choices        = sfx.get_setting_choices(sfx.SoundHooks.MENU_CURSOR),
+            args_help      = '''\
+                             ''',
+            gui_text       = 'Menu Cursor',
+            gui_group      = 'sfx',
+            ),
+    Combobox(
+            name           = 'sfx_menu_select',
+            default        = 'default',
+            choices        = sfx.get_setting_choices(sfx.SoundHooks.MENU_SELECT),
+            args_help      = '''\
+                             ''',
+            gui_text       = 'Menu Select',
+            gui_group      = 'sfx',
+            ),
+    Combobox(
+            name           = 'sfx_horse_neigh',
+            default        = 'default',
+            choices        = sfx.get_setting_choices(sfx.SoundHooks.HORSE_NEIGH),
+            args_help      = '''\
+                             ''',
+            gui_text       = 'Horse',
+            gui_group      = 'sfx',
+            ),
+    Combobox(
+            name           = 'sfx_nightfall',
+            default        = 'default',
+            choices        = sfx.get_setting_choices(sfx.SoundHooks.NIGHTFALL),
+            args_help      = '''\
+                             ''',
+            gui_text       = 'Nightfall',
+            gui_group      = 'sfx',
+            ),
+    Combobox(
+            name           = 'sfx_hover_boots',
+            default        = 'default',
+            choices        = sfx.get_setting_choices(sfx.SoundHooks.BOOTS_HOVER),
+            args_help      = '''\
+                             ''',
+            gui_text       = 'Hover Boots',
+            gui_group      = 'sfx',
             ),
     Combobox(
             name           = 'sfx_ocarina',
