@@ -25,7 +25,7 @@ from Hints import buildGossipHints
 from Utils import default_output_path, is_bundled, subprocess_args, data_path
 from version import __version__
 from N64Patch import create_patch_file, apply_patch_file
-from SettingsList import setting_infos, logic_tricks
+from SettingsList import setting_infos, logic_tricks, glitch_tricks
 from Rules import set_rules
 
 
@@ -49,6 +49,8 @@ def main(settings, window=dummy_window()):
     allowed_tricks = {}
     for trick in logic_tricks.values():
         settings.__dict__[trick['name']] = trick['name'] in settings.allowed_tricks
+    for glitch in glitch_tricks.values():
+        settings.__dict__[glitch['name']] = glitch['name'] in settings.allowed_tricks
 
 
     # we load the rom before creating the seed so that error get caught early

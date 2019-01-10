@@ -142,7 +142,7 @@ class State(object):
 
 
     def has_ocarina(self):
-        return (self.has('Ocarina') or self.has("Fairy Ocarina") or self.has("Ocarina of Time"))
+        return (self.has('Ocarina') or self.has("Fairy Ocarina") or self.has("Ocarina of Time") or (self.has_bottle() and self.world.put_away_OI))
 
 
     def can_play(self, song):

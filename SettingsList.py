@@ -404,6 +404,14 @@ glitch_tricks = {
                     or crouch stab) to exit the forest
                     by bypassing the Kokiri kid.
                     '''},
+    'Ocarina item': {
+        'name'    : 'put_away_OI',
+        'tooltip' : '''\
+                    Uses a bottle with something
+                    to cause put away Ocarina Item.
+                    NB: Inventory manipulation is not
+                    allowed.
+                    '''},
 }
 
 
