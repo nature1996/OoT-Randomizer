@@ -233,6 +233,22 @@ class State(object):
         return (self.has('Zora Tunic') or self.has('Buy Zora Tunic'))
 
 
+    def can_child_megaflip(self):
+        return (self.has('Buy Deku Shield') and self.has_explosives())
+
+
+    def can_child_hover(self):
+        return (self.can_child_megaflip() and (self.has_sticks() or self.has('Kokiri Sword')))
+
+
+    def can_adult_megaflip(self):
+        return ((self.has('Buy Hylian Shield') or self.has('Mirror Shield')) and self.has_explosive() and self.is_adult())
+
+
+    def can_adult_hover(self):
+        return ((self.has('Buy Hylian Shield') or self.has('Mirror Shield')) and self.has_explosive() and self.is_adult())
+
+
     def can_leave_forest(self):
         if self.world.open_forest == 'open':
             return True
