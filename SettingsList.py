@@ -404,6 +404,13 @@ glitch_tricks = {
                     or crouch stab) to exit the forest
                     by bypassing the Kokiri kid.
                     '''},
+    'Mido: Deku Tree': {
+        'name'    : 'mido_DT_skip',
+        'tooltip' : '''\
+                    Uses either Walking while talking
+                    or Mido Skip to pass by Mido and
+                    access Deku Tree.
+                    '''},
     'Ocarina item': {
         'name'    : 'put_away_OI',
         'tooltip' : '''\

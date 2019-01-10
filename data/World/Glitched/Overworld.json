@@ -22,7 +22,7 @@
             "House of Twins": "True",
             "Know It All House": "True",
             "Kokiri Shop": "True",
-            "Deku Tree Glade": "open_deku or is_adult",
+            "Deku Tree Glade": "open_deku or is_adult or (mido_DT_skip and (Kokiri_Sword or has_sticks or has_nuts))",
             "Lost Woods": "True",
             "Lost Woods Bridge": "(open_forest == 'open') or can_reach(Queen_Gohma, Location) or is_adult
                     or (pokey_escape and (Kokiri_Sword or has_sticks or (Buy_Deku_Shield and has_explosives) or has_nuts))",
