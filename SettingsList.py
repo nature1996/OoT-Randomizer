@@ -412,6 +412,15 @@ glitch_tricks = {
                     NB: Inventory manipulation is not
                     allowed.
                     '''},
+    'Gerudo cross jump as a child': {
+        'name'    : 'gerudo_bridge_child',
+        'tooltip' : '''\
+                    Allow the possibility for child link
+                    to use Cucco jump or Megaflip to reach
+                    Gerudo Fortress. Might expect you to
+                    use a gate skip to get to Wasteland.
+                    Nb: not fully implanted yet.
+                    '''},
 }
 
 
