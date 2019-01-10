@@ -304,7 +304,7 @@
         },
         "exits": {
             "Haunted Wasteland": "
-                Carpenter_Rescue and (can_use(Hover_Boots) or can_use(Longshot))",
+                Carpenter_Rescue and (can_use(Hover_Boots) or can_use(Longshot) or sandpit_cross)",
             "Gerudo Training Grounds Lobby": "
                 Carpenter_Rescue and Gerudo_Membership_Card and is_adult"
         }
@@ -317,7 +317,9 @@
             "GS Wasteland Ruins": "can_use(Hookshot)"
         },
         "exits": {
-            "Desert Colossus": "(logic_lens == 'chest') or can_use(Lens_of_Truth)"
+            "Desert Colossus": "(logic_lens == 'chest') or can_use(Lens_of_Truth)",
+            "Gerudo Fortress": "
+                Carpenter_Rescue and (can_use(Hover_Boots) or can_use(Longshot) or sandpit_cross)"
         }
     },
     {

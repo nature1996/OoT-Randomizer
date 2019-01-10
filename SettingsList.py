@@ -375,10 +375,12 @@ logic_tricks = {
 }
 
 glitch_tricks = {
-    'Uses Navi dive to exit Kokiri forest': {
-        'name'    : 'Navi_dive',
+    'Wasteland Sandpit cross with noting': {
+        'name'    : 'sandpit_cross',
         'tooltip' : '''\
-                    Not ready to be implented
+                    Cross the sandpit at the start of the
+                    Wasteland by walking through it, as
+                    a child or an adult.
                     '''},
 }
 
