@@ -338,7 +338,8 @@
             "Spirit Temple Lobby": "True",
             "Desert Colossus Grotto": "can_use(Silver_Gauntlets)",
             "Desert Colossus Gossip Stone": "
-                hints != 'mask' or can_play(Requiem_of_Spirit)"
+                hints != 'mask' or can_play(Requiem_of_Spirit)",
+            "Haunted Wasteland": "reverse_wasteland"
         }
     },
     {

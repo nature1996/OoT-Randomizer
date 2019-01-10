@@ -372,6 +372,14 @@ logic_tricks = {
                     Water Temple that could contain the Boss Key
                     as requiring Iron Boots.
                     '''},
+    'Reverse Wasteland': {
+        'name'    : 'reverse_wasteland',
+        'tooltip' : '''\
+                    Allows going from Desert Colossus toward
+                    the Wasteland Ruins. This is the reverse
+                    of normal, and a such require to know
+                    the right way to go.
+                    '''},
 }
 
 glitch_tricks = {
