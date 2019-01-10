@@ -241,7 +241,9 @@ class State(object):
         else: #Forest escape and Deku escape
             can_teleport = self.can_play('Prelude of Light') or self.can_play('Serenade of Water') or self.can_play('Nocturne of Shadow')
             lost_wood_exit = (self.has_explosives() or self.can_use('Dins Fire')) or self.can_dive()
-            return self.can_reach(self.world.get_location('Queen Gohma')) or lost_wood_exit or can_teleport
+            can_navi_dive = (self.has('Kokiri Sword') or self.has_sticks) and (world.nvd_lost_wood)
+            pokey_exit = (self.has('Kokiri Sword') or self.has_sticks or (self.has('Buy Deku Shield') and self.has_explosives()) or self.has_nuts()) and world.pokey_escape
+            return self.can_reach(self.world.get_location('Queen Gohma')) or lost_wood_exit or can_teleport or can_navi_dive
 
 
     def open_deku(self):

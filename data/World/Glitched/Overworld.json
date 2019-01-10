@@ -24,7 +24,8 @@
             "Kokiri Shop": "True",
             "Deku Tree Glade": "open_deku or is_adult",
             "Lost Woods": "True",
-            "Lost Woods Bridge": "(open_forest == 'open') or can_reach(Queen_Gohma, Location) or is_adult",
+            "Lost Woods Bridge": "(open_forest == 'open') or can_reach(Queen_Gohma, Location) or is_adult
+                    or (pokey_escape and (Kokiri_Sword or has_sticks or (Buy_Deku_Shield and has_explosives) or has_nuts))",
             "Kokiri Forest Storms Grotto": "can_play(Song_of_Storms)"
         }
     },
@@ -130,7 +131,7 @@
             "Kokiri Forest": "True",
             "Sacred Forest Meadow Entryway": "True",
             "Goron City Woods Warp": "True",
-            "Zora River Child": "can_dive and can_leave_forest",
+            "Zora River Child": "(can_dive or (nvd_lost_wood and (Kokiri_Sword or has_sticks))) and can_leave_forest",
             "Forest Temple Entry Area": "can_play(Sarias_Song) and is_adult",
             "Lost Woods Generic Grotto": "can_blast_or_smash",
             "Deku Theater": "True",
@@ -176,7 +177,8 @@
     {
         "region_name": "Lost Woods Bridge",
         "locations": {
-            "Gift from Saria": "(open_forest == 'open') or can_reach(Queen_Gohma, Location) or is_adult"
+            "Gift from Saria": "(open_forest == 'open') or can_reach(Queen_Gohma, Location) or is_adult
+                or (pokey_escape and (Kokiri_Sword or has_sticks or (Buy_Deku_Shield and has_explosives) or has_nuts))"
         },
         "exits": {
             "Kokiri Forest": "True",

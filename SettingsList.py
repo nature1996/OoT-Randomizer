@@ -382,6 +382,20 @@ glitch_tricks = {
                     Wasteland by walking through it, as
                     a child or an adult.
                     '''},
+    'Navi dive: lost wood': {
+        'name'    : 'nvd_lost_wood',
+        'tooltip' : '''\
+                    Use a Navi dive to pass through
+                    Zora river exit of lost wood.
+                    '''},
+    'Pokey: Forest main exit': {
+        'name'    : 'pokey_escape',
+        'tooltip' : '''\
+                    Uses one of many tricks (HESS,
+                    Water ESS, Walking while talking
+                    or crouch stab) to exit the forest
+                    by bypassing the Kokiri kid.
+                    '''},
 }
 
 
