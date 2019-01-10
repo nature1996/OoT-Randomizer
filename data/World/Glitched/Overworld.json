@@ -280,7 +280,8 @@
         },
         "exits": {
             "Gerudo Fortress": "True",
-            "Gerudo Valley Storms Grotto": "can_play(Song_of_Storms)"
+            "Gerudo Valley Storms Grotto": "can_play(Song_of_Storms) 
+                and (Epona or can_use(Longshot) or ((gerudo_fortress == 'open') and is_adult))"
         }
     },
     {
