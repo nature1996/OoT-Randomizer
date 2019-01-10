@@ -121,6 +121,7 @@ def guiMain(settings=None):
     frames['rom_tab'] = ttk.Frame(notebook)
     frames['rules_tab'] = ttk.Frame(notebook)
     frames['logic_tab'] = ttk.Frame(notebook)
+    frames['glitch_tab'] = ttk.Frame(notebook)
     frames['other_tab'] = ttk.Frame(notebook)
     frames['cosmetic_tab'] = ttk.Frame(notebook)
     frames['cosmetic_tab_left'] = Frame(frames['cosmetic_tab'])
@@ -128,6 +129,7 @@ def guiMain(settings=None):
     notebook.add(frames['rom_tab'], text='ROM Options')
     notebook.add(frames['rules_tab'], text='Main Rules')
     notebook.add(frames['logic_tab'], text='Detailed Logic')
+    notebook.add(frames['glitch_tab'], text='Glitch')
     notebook.add(frames['other_tab'], text='Other')
     notebook.add(frames['cosmetic_tab'], text='Cosmetic')
 
@@ -588,9 +590,14 @@ def guiMain(settings=None):
             notebook.tab(1, state="normal")
             if guivars['logic_rules'].get() == 'Glitchless':
                 notebook.tab(2, state="normal")
+                notebook.tab(3, state="disabled")
+            elif guivars['logic_rules'].get() == 'Glitched':
+                notebook.tab(2, state="normal")
+                notebook.tab(3, state="normal")
             else:
-                notebook.tab(2, state="disabled")
-            notebook.tab(3, state="normal")
+                notebook.tab(2, state="disable")
+                notebook.tab(3, state="disable")
+            notebook.tab(4, state="normal")
 
             settings = guivars_to_settings(guivars)
             toggle_widget(widgets['world_count'], settings.check_dependency('world_count'))
@@ -601,6 +608,7 @@ def guiMain(settings=None):
             notebook.tab(1, state="disabled")
             notebook.tab(2, state="disabled")
             notebook.tab(3, state="disabled")
+            notebook.tab(4, state="disabled")
             toggle_widget(widgets['world_count'], False)
             toggle_widget(widgets['create_spoiler'], False)
             toggle_widget(widgets['count'], False)

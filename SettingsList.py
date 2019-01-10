@@ -180,6 +180,25 @@ def logic_tricks_list_tooltip(widget, pos):
     else:
         return None
 
+def glitch_tricks_entry_tooltip(widget, pos):
+    val = widget.get()
+    if val in glitch_tricks:
+        text = val + '\n\n' + glitch_tricks[val]['tooltip']
+        text = '\n'.join([line.strip() for line in text.splitlines()]).strip()
+        return text
+    else:
+        return None
+
+def glitch_tricks_list_tooltip(widget, pos):
+    index = widget.index("@%s,%s" % (pos))
+    val = widget.get(index)
+    if val in glitch_tricks:
+        text = val + '\n\n' + glitch_tricks[val]['tooltip']
+        text = '\n'.join([line.strip() for line in text.splitlines()]).strip()
+        return text
+    else:
+        return None
+
 
 
 logic_tricks = {
@@ -354,6 +373,15 @@ logic_tricks = {
                     as requiring Iron Boots.
                     '''},
 }
+
+glitch_tricks = {
+    'Uses Navi dive to exit Kokiri forest': {
+        'name'    : 'Navi_dive',
+        'tooltip' : '''\
+                    Not ready to be implented
+                    '''},
+}
+
 
 
 # a list of the possible settings
@@ -1366,6 +1394,21 @@ setting_infos = [
             'options': {gui_text: val['name'] for gui_text, val in logic_tricks.items()},
             'entry_tooltip': logic_tricks_entry_tooltip,
             'list_tooltip': logic_tricks_list_tooltip,
+        }),
+    Setting_Info('allowed_glitch', list, math.ceil(math.log(len(glitch_tricks) + 2, 2)), True,
+        {
+            'default': [],
+            'help': '''\
+                    Choose a list of allowed glitch logic may expect to beat the game.
+                    '''
+        },
+        {
+            'text': 'Enable glitch',
+            'widget': 'SearchBox',
+            'group': 'glitch_tab',
+            'options': {gui_text: val['name'] for gui_text, val in glitch_tricks.items()},
+            'entry_tooltip': glitch_tricks_entry_tooltip,
+            'list_tooltip': glitch_tricks_list_tooltip,
         }),
     Combobox(
             name           = 'logic_earliest_adult_trade',
