@@ -573,7 +573,7 @@
             "Kakariko Bazaar": "is_adult",
             "Kakariko Shooting Gallery": "True",
             "Bottom of the Well": "
-                nvd_BotW or (can_play(Song_of_Storms) and 
+                (nvd_BotW and (Kokiri_Sword or has_sticks)) or (can_play(Song_of_Storms) and 
                 (dungeon_mq[Bottom_of_the_Well] or can_child_attack or has_nuts))",
             "Kakariko Potion Shop Front": "is_adult",
             "Kakariko Potion Shop Back": "is_adult",
