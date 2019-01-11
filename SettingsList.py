@@ -425,6 +425,13 @@ glitch_tricks = {
                     NB: Inventory manipulation is not
                     allowed.
                     '''},
+    'Get to Goron City from BoF as a child': {
+        'name'    : 'BoF_to_GC_hover',
+        'tooltip' : '''\
+                    Hover from Bolero of Fire
+                    warp pad area to Goron city
+                    as a child.
+                    '''},
     'Gerudo Fortress access as a child': {
         'name'    : 'gerudo_bridge_child',
         'tooltip' : '''\

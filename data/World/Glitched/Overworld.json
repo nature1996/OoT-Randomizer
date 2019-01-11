@@ -889,7 +889,8 @@
         "locations": {
             "DM Crater Volcano Freestanding PoH": "
                 (can_use(Magic_Bean) and can_play(Bolero_of_Fire)) or 
-                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots))",
+                (logic_crater_bean_poh_with_hovers and can_use(Hover_Boots))
+                or (BoF_to_GC_hover and can_child_hover)",
             "Sheik in Crater": "is_adult",
             "GS Mountain Crater Bean Patch": "
                 can_play(Bolero_of_Fire) and has_bottle and can_child_attack"
