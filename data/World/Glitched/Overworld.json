@@ -744,17 +744,10 @@
             "Goron City": "True",
             "Death Mountain Crater Upper": "can_blast_or_smash",
             "Mountain Summit Fairy": "can_blast_or_smash",
-            "Dodongos Cavern Entryway": "
+            "Dodongos Cavern Beginning": "
                 has_explosives or Progressive_Strength_Upgrade or is_adult",
             "Mountain Bombable Grotto": "can_blast_or_smash",
             "Mountain Storms Grotto": "can_play(Song_of_Storms)"
-        }
-    },
-    {
-        "region_name": "Dodongos Cavern Entryway",
-        "exits": {
-            "Dodongos Cavern Beginning": "True",
-            "Death Mountain": "True"
         }
     },
     {
@@ -1044,7 +1037,7 @@
                 Progressive_Hookshot and nighttime"
         },
         "exits": {
-            "Ice Cavern": "True"
+            "Ice Cavern": "is_adult"
         }
     },
     {
