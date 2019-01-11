@@ -1,6 +1,7 @@
 # OoTRandomizer
 
-This is a randomizer for _The Legend of Zelda: Ocarina of Time_ for the Nintendo 64.
+This is a randomizer for _The Legend of Zelda: Ocarina of Time_ for the Nintendo 64, Containing glitched-logic, phase 1 over.
+This include mostly forest escape related glitch, but in the scope of the randomizer.
 
 ### Installation
 
