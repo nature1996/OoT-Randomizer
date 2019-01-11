@@ -396,6 +396,12 @@ glitch_tricks = {
                     Use a Navi dive to pass through
                     Zora river exit of lost wood.
                     '''},
+    'Navi dive: Bottom of the Well': {
+        'name'    : 'nvd_BotW',
+        'tooltip' : '''\
+                    Use a Navi dive to enter
+                    Bottom of the Well.
+                    '''},
     'Pokey: Forest main exit': {
         'name'    : 'pokey_escape',
         'tooltip' : '''\
