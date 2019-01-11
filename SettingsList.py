@@ -419,7 +419,7 @@ glitch_tricks = {
                     NB: Inventory manipulation is not
                     allowed.
                     '''},
-    'Gerudo cross jump as a child': {
+    'Gerudo Fortress access as a child': {
         'name'    : 'gerudo_bridge_child',
         'tooltip' : '''\
                     Allow the possibility for child link

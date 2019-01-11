@@ -268,7 +268,7 @@
             "Lake Hylia": "True",
             "Gerudo Valley Far Side": "
                 Epona or can_use(Longshot) or ((gerudo_fortress == 'open') and is_adult) 
-                or (gerudo_bridge_child and ((Kokiri_Sword or has_sticks) or (has_explosives and Buy_Deku_Shield)))"
+                or (gerudo_bridge_child and ((Kokiri_Sword or has_sticks) or (can_child_megaflip)))"
         }
     },
     {
@@ -288,7 +288,8 @@
         "region_name": "Gerudo Fortress",
         "locations": {
             "Gerudo Fortress Rooftop Chest": "
-                can_use(Hover_Boots) or can_use(Scarecrow) or can_use(Longshot)",
+                ((((can_use(Hover_Boots) or can_use(Scarecrow)) and Epona) or can_use(Longshot)) and is_adult)
+                or (gerudo_bridge_child and can_child_megaflip and logic_gerudo_kitchen)",
             "Horseback Archery 1000 Points": "
                 Carpenter_Rescue and Epona and Bow and is_adult",
             "Horseback Archery 1500 Points": "
@@ -301,10 +302,10 @@
             "Gerudo Fortress Carpenter Rescue": "can_finish_GerudoFortress",
             "Gerudo Fortress Membership Card": "can_finish_GerudoFortress",
             "GS Gerudo Fortress Archery Range": "
-                can_use(Hookshot) and Carpenter_Rescue and nighttime",
+                (can_use(Longshot) or Epona) and is_adult() and can_use(Hookshot) and Carpenter_Rescue and nighttime",
             "GS Gerudo Fortress Top Floor": "
-                nighttime and (can_use(Bow) or can_use(Hookshot) or 
-                    can_use(Hover_Boots) or logic_gerudo_kitchen)"
+                nighttime and (((can_use(Bow) or can_use(Hookshot) or 
+                    can_use(Hover_Boots)) and (can_use(Longshot) or Epona)) or logic_gerudo_kitchen) and is_adult()"
         },
         "exits": {
             "Haunted Wasteland": "
